@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart'; // memanggil library flutter
 import 'package:flutter_tugas/regis_login02/register02.dart'; // memanggil file register02.dart
-
+// test
 void main() { 
   runApp(const MainApp()); // memanggil class MainApp
 }
