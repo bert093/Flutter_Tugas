@@ -42,8 +42,7 @@ class _UserProfileFormState extends State<Register02> { // class _UserProfileFor
         builder: (BuildContext context) { // builder digunakan untuk membuat konten dari dialog
           return AlertDialog( // AlertDialog digunakan untuk menampilkan dialog
             title: const Text('Kesalahan !!'), // title digunakan untuk judul dari dialog
-            content:
-                const Text('email, password atau persetujuan tidak boleh kosong'), // content digunakan untuk isi dari dialog
+            content: const Text('email, password atau persetujuan tidak boleh kosong'), // content digunakan untuk isi dari dialog
             actions: <Widget>[ // actions digunakan untuk tombol dalam dialog
               TextButton( // TextButton digunakan untuk menampilkan tombol
                 child: const Text('OK'), // child digunakan untuk konten dari tombol
@@ -135,7 +134,7 @@ class _UserProfileFormState extends State<Register02> { // class _UserProfileFor
             const SizedBox(height: 20), // SizedBox digunakan untuk memberikan jarak antara widget
             // Kota Terdekat selection (pak made)
             const Text('Kota Terdekat',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)), // Text digunakan untuk menampilkan teks
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)), // Text digunakan untuk menampilkan teks
             DropdownButton<String>( // DropdownButton digunakan untuk membuat dropdown
               value: _pilihKota, // value digunakan untuk nilai dari dropdown
               onChanged: (String? newValue) { // onChanged digunakan untuk menangani perubahan nilai
@@ -144,7 +143,7 @@ class _UserProfileFormState extends State<Register02> { // class _UserProfileFor
                 });
               },
               items: <String>[ // items digunakan untuk item dalam dropdown
-                '<pilih>',
+                '<pilih>', // nilai dari <pilih> harus sama dengan variabel string _pilihKota (bisa dikasih '' jika ingin kosong)
                 'Mataram',
                 'Peraya',
                 'Selong',
@@ -203,8 +202,8 @@ class _UserProfileFormState extends State<Register02> { // class _UserProfileFor
                 print('Kota Terdekat: $kota'); // mencetak nilai kota terdekat
                 print('Persetujuan: $setuju'); // mencetak nilai persetujuan
 
-                // // kita dapat tambahkan logika pada form  di dalam sini
-                // // pada contoh ini kita menampilkan data pada Dialog
+                // // kita dapat tambahkan logika pada form  di dalam sini (pak made)
+                // // pada contoh ini kita menampilkan data pada Dialog (pak made)
                 // showDialog(
                 //   context: context,
                 //   builder: (BuildContext context) {
