@@ -43,7 +43,7 @@ class _BarangPageState extends State<BarangPage02> { // membuat class _BarangPag
   Widget build(BuildContext context) { // method build untuk membuat widget
     return Scaffold( // membuat scaffold
       appBar: AppBar( // membuat app bar
-        title: Text('Form Input Data Barang'), // judul app bar
+        title: const Text('Form Input Data Barang'), // judul app bar
       ),
       body: Padding( // padding untuk body
         padding: const EdgeInsets.all(16.0), // padding 16.0
@@ -51,23 +51,23 @@ class _BarangPageState extends State<BarangPage02> { // membuat class _BarangPag
           children: [
             TextField( // membuat text field untuk nama
               controller: _nameController, // controller untuk nama
-              decoration: InputDecoration( // dekorasi input
+              decoration: const InputDecoration( // dekorasi input
                 labelText: 'Nama Barang', // label nama barang
                 border: OutlineInputBorder(), // border outline
               ),
             ),
-            SizedBox(height: 10), // jarak 10
+            const SizedBox(height: 10), // jarak 10
             TextField( // membuat text field untuk image
               controller: _imageController, // controller untuk image
-              decoration: InputDecoration( // dekorasi input
+              decoration: const InputDecoration( // dekorasi input
                 labelText: 'URL Gambar Barang', // label URL gambar barang
                 border: OutlineInputBorder(), // border outline
               ),
             ),
-            SizedBox(height: 10), // jarak 10
+            const SizedBox(height: 10), // jarak 10
             ElevatedButton( // membuat tombol untuk menambahkan barang
               onPressed: _addItem, // aksi tombol untuk menambahkan barang
-              child: Text('Tambahkan Barang'), // teks tombol
+              child: const Text('Tambahkan Barang'), // teks tombol
             ),
             Expanded( // membuat list view 
               child: ListView.builder( // membuat list view builder

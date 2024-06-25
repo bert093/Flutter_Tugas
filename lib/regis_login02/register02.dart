@@ -41,12 +41,12 @@ class _UserProfileFormState extends State<Register02> { // class _UserProfileFor
         context: context, // context digunakan untuk mengakses konteks widget
         builder: (BuildContext context) { // builder digunakan untuk membuat konten dari dialog
           return AlertDialog( // AlertDialog digunakan untuk menampilkan dialog
-            title: Text('Kesalahan !!'), // title digunakan untuk judul dari dialog
+            title: const Text('Kesalahan !!'), // title digunakan untuk judul dari dialog
             content:
-                Text('email, password atau persetujuan tidak boleh kosong'), // content digunakan untuk isi dari dialog
+                const Text('email, password atau persetujuan tidak boleh kosong'), // content digunakan untuk isi dari dialog
             actions: <Widget>[ // actions digunakan untuk tombol dalam dialog
               TextButton( // TextButton digunakan untuk menampilkan tombol
-                child: Text('OK'), // child digunakan untuk konten dari tombol
+                child: const Text('OK'), // child digunakan untuk konten dari tombol
                 onPressed: () { // onPressed digunakan untuk menangani klik tombol
                   Navigator.of(context).pop(); // method pop digunakan untuk menutup dialog
                 },
@@ -74,7 +74,7 @@ class _UserProfileFormState extends State<Register02> { // class _UserProfileFor
   Widget build(BuildContext context) { // method build digunakan untuk membuat widget
     return Scaffold( // Scaffold digunakan untuk membuat struktur dasar dari halaman
       appBar: AppBar( // AppBar digunakan untuk membuat app bar
-        title: Text('Form Pendaftaran'), // title digunakan untuk judul dari app bar
+        title: const Text('Form Pendaftaran'), // title digunakan untuk judul dari app bar
       ),
       body: Padding( // Padding digunakan untuk memberikan padding pada konten
         padding: const EdgeInsets.all(16.0), // padding digunakan untuk memberikan jarak antara konten dengan tepi
@@ -83,29 +83,29 @@ class _UserProfileFormState extends State<Register02> { // class _UserProfileFor
             // Nama input (pak made)
             TextField( // TextField digunakan untuk membuat input teks
               controller: _namaController, // controller digunakan untuk mengontrol nilai dari input teks
-              decoration: InputDecoration(labelText: 'Nama'), // decoration digunakan untuk memberikan dekorasi pada input teks
+              decoration: const InputDecoration(labelText: 'Nama'), // decoration digunakan untuk memberikan dekorasi pada input teks
             ),
             // Email input (pak made)
             TextField( // TextField digunakan untuk membuat input teks
               controller: _emailController, // controller digunakan untuk mengontrol nilai dari input teks
-              decoration: InputDecoration(labelText: 'Email'), // decoration digunakan untuk memberikan dekorasi pada input teks
+              decoration: const InputDecoration(labelText: 'Email'), // decoration digunakan untuk memberikan dekorasi pada input teks
               keyboardType: TextInputType.emailAddress, // keyboardType digunakan untuk menentukan jenis keyboard yang muncul
             ),
             TextField( // TextField digunakan untuk membuat input teks
               controller: _pswdController, // controller digunakan untuk mengontrol nilai dari input teks
-              decoration: InputDecoration(labelText: 'Password'), // decoration digunakan untuk memberikan dekorasi pada input teks
+              decoration: const InputDecoration(labelText: 'Password'), // decoration digunakan untuk memberikan dekorasi pada input teks
               keyboardType: TextInputType.visiblePassword, // keyboardType digunakan untuk menentukan jenis keyboard yang muncul
               obscureText: true, // obscureText digunakan untuk menyembunyikan teks yang diinput
             ),
             // Telepon input (pak made)
             TextField( // TextField digunakan untuk membuat input teks
               controller: _tlpnController, // controller digunakan untuk mengontrol nilai dari input teks
-              decoration: InputDecoration(labelText: 'Telepon'), // decoration digunakan untuk memberikan dekorasi pada input teks
+              decoration: const InputDecoration(labelText: 'Telepon'), // decoration digunakan untuk memberikan dekorasi pada input teks
               keyboardType: TextInputType.phone, // keyboardType digunakan untuk menentukan jenis keyboard yang muncul
             ),
-            SizedBox(height: 20), // SizedBox digunakan untuk memberikan jarak antara widget
+            const SizedBox(height: 20), // SizedBox digunakan untuk memberikan jarak antara widget
             // Jenis Kelamin selection (pak made)
-            Text('Jenis Kelamin',
+            const Text('Jenis Kelamin',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)), // Text digunakan untuk menampilkan teks
             ListTile( // ListTile digunakan untuk membuat item dalam daftar
               title: const Text('Pria'), // title digunakan untuk judul dari item
@@ -171,7 +171,7 @@ class _UserProfileFormState extends State<Register02> { // class _UserProfileFor
                 });
               },
             ),
-            SizedBox(height: 20), // SizedBox digunakan untuk memberikan jarak antara widget
+            const SizedBox(height: 20), // SizedBox digunakan untuk memberikan jarak antara widget
             // Submit button (pak made)
             ElevatedButton( // ElevatedButton digunakan untuk membuat tombol
               onPressed: () { // onPressed digunakan untuk menangani klik tombol
@@ -234,7 +234,7 @@ class _UserProfileFormState extends State<Register02> { // class _UserProfileFor
                 //   },
                 // );
               },
-              child: Text('Daftar'), // child digunakan untuk konten dari tombol
+              child: const Text('Daftar'), // child digunakan untuk konten dari tombol
             ),
           ],
         ),
