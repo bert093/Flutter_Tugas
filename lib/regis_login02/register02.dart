@@ -36,14 +36,13 @@ class _UserProfileFormState extends State<Register02> { // class _UserProfileFor
     String email = _emailController.text; // mengambil nilai dari text field email
     String password = _pswdController.text; // mengambil nilai dari text field password
 
-    // menambahkan saat di bagian email harus diakhiri dengan @gmail.com (SYAHRIL)
-    if (email == '' || password == '' || _setuju == false || !email.endsWith('@gmail.com')) { // jika email, password atau persetujuan kosong, atau email tidak diakhiri dengan @gmai.com, maka akan menampilkan pesan dialog
+    if (email == '' || password == '' || _setuju == false) { // jika email, password atau persetujuan kosong, maka akan menampilkan pesan dialog
       showDialog( // method showDialog digunakan untuk menampilkan dialog
         context: context, // context digunakan untuk mengakses konteks widget
         builder: (BuildContext context) { // builder digunakan untuk membuat konten dari dialog
           return AlertDialog( // AlertDialog digunakan untuk menampilkan dialog
             title: const Text('Kesalahan !!'), // title digunakan untuk judul dari dialog
-            content: const Text('email, password atau persetujuan tidak boleh kosong dan email harus diakhiri dengan @gmail.com'), // content digunakan untuk isi dari dialog
+            content: const Text('email, password atau persetujuan tidak boleh kosong'), // content digunakan untuk isi dari dialog
             actions: <Widget>[ // actions digunakan untuk tombol dalam dialog
               TextButton( // TextButton digunakan untuk menampilkan tombol
                 child: const Text('OK'), // child digunakan untuk konten dari tombol
