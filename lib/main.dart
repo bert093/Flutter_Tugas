@@ -11,6 +11,7 @@ class MainApp extends StatelessWidget { // membuat class MainApp yang merupakan 
   @override
   Widget build(BuildContext context) { // method build digunakan untuk membuat widget
     return const MaterialApp( 
+      debugShowCheckedModeBanner: false,
       home: Register02(), // home digunakan untuk menentukan halaman utama
       // home: Scaffold(
       //   body: Center(
