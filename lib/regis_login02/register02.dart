@@ -36,7 +36,7 @@ class _UserProfileFormState extends State<Register02> { // class _UserProfileFor
     String email = _emailController.text; // mengambil nilai dari text field email
     String password = _pswdController.text; // mengambil nilai dari text field password
 
-    // menambahkan saat di bagian email tidak diakhiri dengan @gmail.com (SYAHRIL)
+    // menambahkan saat di bagian email harus diakhiri dengan @gmail.com (SYAHRIL)
     if (email == '' || password == '' || _setuju == false || !email.endsWith('@gmail.com')) { // jika email, password atau persetujuan kosong, atau email tidak diakhiri dengan @gmai.com, maka akan menampilkan pesan dialog
       showDialog( // method showDialog digunakan untuk menampilkan dialog
         context: context, // context digunakan untuk mengakses konteks widget
